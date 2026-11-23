@@ -1,0 +1,28 @@
+classDiagram
+    class Tarefa {
+      +int id
+      +str titulo
+      +str descricao
+      +str prioridade
+      +str responsavel
+      +str status
+      +criar()
+      +consultar()
+      +atualizar()
+      +excluir()
+      +moverEtapa()
+    }
+    class QuadroKanban {
+      +listarPorStatus()
+      +filtrarPorPrioridade()
+      +buscarPorTexto()
+    }
+    class BancoDados {
+      +conectar()
+      +inicializar()
+      +salvarTarefa()
+      +atualizarTarefa()
+      +removerTarefa()
+    }
+    QuadroKanban "1" o-- "*" Tarefa : organiza
+    BancoDados "1" --> "*" Tarefa : persiste
