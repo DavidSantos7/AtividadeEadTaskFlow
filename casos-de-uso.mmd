@@ -1,0 +1,27 @@
+flowchart LR
+    Operador([Operador da logística])
+    Gestor([Gestor])
+    Sistema((TechFlow - Sistema de tarefas))
+    UC1([Cadastrar tarefa])
+    UC2([Consultar quadro Kanban])
+    UC3([Editar tarefa])
+    UC4([Excluir tarefa])
+    UC5([Alterar status])
+    UC6([Definir prioridade])
+    UC7([Buscar e filtrar tarefas])
+    Operador --- UC1
+    Operador --- UC2
+    Operador --- UC3
+    Operador --- UC5
+    Gestor --- UC2
+    Gestor --- UC6
+    Gestor --- UC7
+    Gestor --- UC3
+    Gestor --- UC4
+    UC1 --- Sistema
+    UC2 --- Sistema
+    UC3 --- Sistema
+    UC4 --- Sistema
+    UC5 --- Sistema
+    UC6 --- Sistema
+    UC7 --- Sistema
